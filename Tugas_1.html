@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>L200150049 - Mutia Hidayati Rahman</title>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 400px;
+        width: 75%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body align= 'center'>
+    <h1>Mata Kuliah Sistem Informasi Geografis</h1>
+    <h3>Gedung Induk Siti Walidah</h3>
+    <h3>Universitas Muhammadiyah Surakarta</h3>
+    <center>
+      <div id="map"></div>
+    </center>
+    <script>
+
+      function initMap() {
+        var myLatLng = {lat: -7.5577622, lng: 110.7716348};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: myLatLng
+        });
+
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpo4vZ5CFez0-hCnIyRhIVlyWhrtbSTZI&callback=initMap">
+    </script>
+  </body>
+</html>
